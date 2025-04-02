@@ -1,0 +1,1 @@
+var json_Toilet_16 = {"type":"FeatureCollection","name":"Toilet_16","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","Name":"Toilets - 2 x M/F (1 with Wheelchair Access) Disabled Also includes Shower"},"geometry":{"type":"Point","coordinates":[144.158440923808854,-37.946499083169186]}}]}
