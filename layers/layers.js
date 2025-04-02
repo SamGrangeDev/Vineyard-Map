@@ -261,27 +261,42 @@ var lyr_GlampingTent_17 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/GlampingTent_17.png" /> Glamping Tent'
             });
-var format_SiteBoundary_18 = new ol.format.GeoJSON();
-var features_SiteBoundary_18 = format_SiteBoundary_18.readFeatures(json_SiteBoundary_18, 
+var format_BufferDistancesResidential_18 = new ol.format.GeoJSON();
+var features_BufferDistancesResidential_18 = format_BufferDistancesResidential_18.readFeatures(json_BufferDistancesResidential_18, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_SiteBoundary_18 = new ol.source.Vector({
+var jsonSource_BufferDistancesResidential_18 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_SiteBoundary_18.addFeatures(features_SiteBoundary_18);
-var lyr_SiteBoundary_18 = new ol.layer.Vector({
+jsonSource_BufferDistancesResidential_18.addFeatures(features_BufferDistancesResidential_18);
+var lyr_BufferDistancesResidential_18 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_SiteBoundary_18, 
-                style: style_SiteBoundary_18,
+                source:jsonSource_BufferDistancesResidential_18, 
+                style: style_BufferDistancesResidential_18,
+                popuplayertitle: 'Buffer Distances (Residential)',
+                interactive: false,
+                title: '<img src="styles/legend/BufferDistancesResidential_18.png" /> Buffer Distances (Residential)'
+            });
+var format_SiteBoundary_19 = new ol.format.GeoJSON();
+var features_SiteBoundary_19 = format_SiteBoundary_19.readFeatures(json_SiteBoundary_19, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_SiteBoundary_19 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_SiteBoundary_19.addFeatures(features_SiteBoundary_19);
+var lyr_SiteBoundary_19 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_SiteBoundary_19, 
+                style: style_SiteBoundary_19,
                 popuplayertitle: 'Site Boundary',
                 interactive: false,
-                title: '<img src="styles/legend/SiteBoundary_18.png" /> Site Boundary'
+                title: '<img src="styles/legend/SiteBoundary_19.png" /> Site Boundary'
             });
 var group_Administrative = new ol.layer.Group({
-                                layers: [lyr_SiteBoundary_18,],
+                                layers: [lyr_SiteBoundary_19,],
                                 fold: "close",
                                 title: 'Administrative'});
 var group_LandUse = new ol.layer.Group({
-                                layers: [lyr_PassiveOpenSpace_3,lyr_MixedFarming_4,lyr_LawnandPlayground_5,lyr_Wetland_6,lyr_Orchard_7,lyr_Vineyard_8,lyr_Garden_9,lyr_TuscanGardenandCottage_10,lyr_ParkingSpace_11,lyr_FunctionSpace_12,lyr_PedestrianPath_13,lyr_Road_14,lyr_AccessRoad_15,lyr_Toilet_16,lyr_GlampingTent_17,],
+                                layers: [lyr_PassiveOpenSpace_3,lyr_MixedFarming_4,lyr_LawnandPlayground_5,lyr_Wetland_6,lyr_Orchard_7,lyr_Vineyard_8,lyr_Garden_9,lyr_TuscanGardenandCottage_10,lyr_ParkingSpace_11,lyr_FunctionSpace_12,lyr_PedestrianPath_13,lyr_Road_14,lyr_AccessRoad_15,lyr_Toilet_16,lyr_GlampingTent_17,lyr_BufferDistancesResidential_18,],
                                 fold: "close",
                                 title: 'Land Use'});
 var group_BaseLayer = new ol.layer.Group({
@@ -289,7 +304,7 @@ var group_BaseLayer = new ol.layer.Group({
                                 fold: "open",
                                 title: 'Base Layer'});
 
-lyr_ESRISatelliteArcGISWorld_Imagery_0.setVisible(false);lyr_GoogleRoads_1.setVisible(false);lyr_GoogleSatelliteHybrid_2.setVisible(true);lyr_PassiveOpenSpace_3.setVisible(true);lyr_MixedFarming_4.setVisible(true);lyr_LawnandPlayground_5.setVisible(true);lyr_Wetland_6.setVisible(true);lyr_Orchard_7.setVisible(true);lyr_Vineyard_8.setVisible(true);lyr_Garden_9.setVisible(true);lyr_TuscanGardenandCottage_10.setVisible(true);lyr_ParkingSpace_11.setVisible(true);lyr_FunctionSpace_12.setVisible(true);lyr_PedestrianPath_13.setVisible(true);lyr_Road_14.setVisible(true);lyr_AccessRoad_15.setVisible(true);lyr_Toilet_16.setVisible(true);lyr_GlampingTent_17.setVisible(true);lyr_SiteBoundary_18.setVisible(true);
+lyr_ESRISatelliteArcGISWorld_Imagery_0.setVisible(false);lyr_GoogleRoads_1.setVisible(false);lyr_GoogleSatelliteHybrid_2.setVisible(true);lyr_PassiveOpenSpace_3.setVisible(true);lyr_MixedFarming_4.setVisible(true);lyr_LawnandPlayground_5.setVisible(true);lyr_Wetland_6.setVisible(true);lyr_Orchard_7.setVisible(true);lyr_Vineyard_8.setVisible(true);lyr_Garden_9.setVisible(true);lyr_TuscanGardenandCottage_10.setVisible(true);lyr_ParkingSpace_11.setVisible(true);lyr_FunctionSpace_12.setVisible(true);lyr_PedestrianPath_13.setVisible(true);lyr_Road_14.setVisible(true);lyr_AccessRoad_15.setVisible(true);lyr_Toilet_16.setVisible(true);lyr_GlampingTent_17.setVisible(true);lyr_BufferDistancesResidential_18.setVisible(false);lyr_SiteBoundary_19.setVisible(true);
 var layersList = [group_BaseLayer,group_LandUse,group_Administrative];
 lyr_PassiveOpenSpace_3.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'PROP_PFI': 'PROP_PFI', 'PROP_LGA_CODE': 'PROP_LGA_CODE', 'PROP_PROPNUM': 'PROP_PROPNUM', 'PROP_PROPERTY_TYPE': 'PROP_PROPERTY_TYPE', 'PROP_MULTI_ASSESSMENT': 'PROP_MULTI_ASSESSMENT', 'PROP_STATUS': 'PROP_STATUS', 'ADD_EZI_ADDRESS': 'ADD_EZI_ADDRESS', 'ADD_IS_PRIMARY': 'ADD_IS_PRIMARY', 'ADD_HOUSE_NUMBER_1': 'ADD_HOUSE_NUMBER_1', 'ADD_HOUSE_SUFFIX_1': 'ADD_HOUSE_SUFFIX_1', 'ADD_ROAD_NAME': 'ADD_ROAD_NAME', 'ADD_ROAD_TYPE': 'ADD_ROAD_TYPE', 'ADD_ROAD_SUFFIX': 'ADD_ROAD_SUFFIX', 'ADD_LOCALITY_NAME': 'ADD_LOCALITY_NAME', 'ADD_STATE': 'ADD_STATE', 'ADD_POSTCODE': 'ADD_POSTCODE', 'ADD_NUM_ROAD_ADDRESS': 'ADD_NUM_ROAD_ADDRESS', 'Shape_Length': 'Shape_Length', 'Shape_Area': 'Shape_Area', });
 lyr_MixedFarming_4.set('fieldAliases', {'id': 'id', 'a': 'a', });
@@ -306,7 +321,8 @@ lyr_Road_14.set('fieldAliases', {'fid': 'fid', 'id': 'id', });
 lyr_AccessRoad_15.set('fieldAliases', {'id': 'id', });
 lyr_Toilet_16.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', });
 lyr_GlampingTent_17.set('fieldAliases', {'fid': 'fid', 'Name': 'Name', });
-lyr_SiteBoundary_18.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'PROP_PFI': 'PROP_PFI', 'PROP_LGA_CODE': 'PROP_LGA_CODE', 'PROP_PROPNUM': 'PROP_PROPNUM', 'PROP_PROPERTY_TYPE': 'PROP_PROPERTY_TYPE', 'PROP_MULTI_ASSESSMENT': 'PROP_MULTI_ASSESSMENT', 'PROP_STATUS': 'PROP_STATUS', 'ADD_EZI_ADDRESS': 'ADD_EZI_ADDRESS', 'ADD_IS_PRIMARY': 'ADD_IS_PRIMARY', 'ADD_HOUSE_NUMBER_1': 'ADD_HOUSE_NUMBER_1', 'ADD_HOUSE_SUFFIX_1': 'ADD_HOUSE_SUFFIX_1', 'ADD_ROAD_NAME': 'ADD_ROAD_NAME', 'ADD_ROAD_TYPE': 'ADD_ROAD_TYPE', 'ADD_ROAD_SUFFIX': 'ADD_ROAD_SUFFIX', 'ADD_LOCALITY_NAME': 'ADD_LOCALITY_NAME', 'ADD_STATE': 'ADD_STATE', 'ADD_POSTCODE': 'ADD_POSTCODE', 'ADD_NUM_ROAD_ADDRESS': 'ADD_NUM_ROAD_ADDRESS', 'Shape_Length': 'Shape_Length', 'Shape_Area': 'Shape_Area', });
+lyr_BufferDistancesResidential_18.set('fieldAliases', {'fid': 'fid', 'id': 'id', 'layer': 'layer', 'path': 'path', });
+lyr_SiteBoundary_19.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'PROP_PFI': 'PROP_PFI', 'PROP_LGA_CODE': 'PROP_LGA_CODE', 'PROP_PROPNUM': 'PROP_PROPNUM', 'PROP_PROPERTY_TYPE': 'PROP_PROPERTY_TYPE', 'PROP_MULTI_ASSESSMENT': 'PROP_MULTI_ASSESSMENT', 'PROP_STATUS': 'PROP_STATUS', 'ADD_EZI_ADDRESS': 'ADD_EZI_ADDRESS', 'ADD_IS_PRIMARY': 'ADD_IS_PRIMARY', 'ADD_HOUSE_NUMBER_1': 'ADD_HOUSE_NUMBER_1', 'ADD_HOUSE_SUFFIX_1': 'ADD_HOUSE_SUFFIX_1', 'ADD_ROAD_NAME': 'ADD_ROAD_NAME', 'ADD_ROAD_TYPE': 'ADD_ROAD_TYPE', 'ADD_ROAD_SUFFIX': 'ADD_ROAD_SUFFIX', 'ADD_LOCALITY_NAME': 'ADD_LOCALITY_NAME', 'ADD_STATE': 'ADD_STATE', 'ADD_POSTCODE': 'ADD_POSTCODE', 'ADD_NUM_ROAD_ADDRESS': 'ADD_NUM_ROAD_ADDRESS', 'Shape_Length': 'Shape_Length', 'Shape_Area': 'Shape_Area', });
 lyr_PassiveOpenSpace_3.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'PROP_PFI': 'TextEdit', 'PROP_LGA_CODE': 'TextEdit', 'PROP_PROPNUM': 'TextEdit', 'PROP_PROPERTY_TYPE': 'TextEdit', 'PROP_MULTI_ASSESSMENT': 'TextEdit', 'PROP_STATUS': 'TextEdit', 'ADD_EZI_ADDRESS': 'TextEdit', 'ADD_IS_PRIMARY': 'TextEdit', 'ADD_HOUSE_NUMBER_1': 'TextEdit', 'ADD_HOUSE_SUFFIX_1': 'TextEdit', 'ADD_ROAD_NAME': 'TextEdit', 'ADD_ROAD_TYPE': 'TextEdit', 'ADD_ROAD_SUFFIX': 'TextEdit', 'ADD_LOCALITY_NAME': 'TextEdit', 'ADD_STATE': 'TextEdit', 'ADD_POSTCODE': 'TextEdit', 'ADD_NUM_ROAD_ADDRESS': 'TextEdit', 'Shape_Length': 'TextEdit', 'Shape_Area': 'TextEdit', });
 lyr_MixedFarming_4.set('fieldImages', {'id': 'TextEdit', 'a': 'TextEdit', });
 lyr_LawnandPlayground_5.set('fieldImages', {'id': 'TextEdit', 'a': 'TextEdit', });
@@ -322,7 +338,8 @@ lyr_Road_14.set('fieldImages', {'fid': '', 'id': '', });
 lyr_AccessRoad_15.set('fieldImages', {'id': 'TextEdit', });
 lyr_Toilet_16.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', });
 lyr_GlampingTent_17.set('fieldImages', {'fid': 'TextEdit', 'Name': 'TextEdit', });
-lyr_SiteBoundary_18.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'PROP_PFI': 'TextEdit', 'PROP_LGA_CODE': 'TextEdit', 'PROP_PROPNUM': 'TextEdit', 'PROP_PROPERTY_TYPE': 'TextEdit', 'PROP_MULTI_ASSESSMENT': 'TextEdit', 'PROP_STATUS': 'TextEdit', 'ADD_EZI_ADDRESS': 'TextEdit', 'ADD_IS_PRIMARY': 'TextEdit', 'ADD_HOUSE_NUMBER_1': 'TextEdit', 'ADD_HOUSE_SUFFIX_1': 'TextEdit', 'ADD_ROAD_NAME': 'TextEdit', 'ADD_ROAD_TYPE': 'TextEdit', 'ADD_ROAD_SUFFIX': 'TextEdit', 'ADD_LOCALITY_NAME': 'TextEdit', 'ADD_STATE': 'TextEdit', 'ADD_POSTCODE': 'TextEdit', 'ADD_NUM_ROAD_ADDRESS': 'TextEdit', 'Shape_Length': 'TextEdit', 'Shape_Area': 'TextEdit', });
+lyr_BufferDistancesResidential_18.set('fieldImages', {'fid': 'TextEdit', 'id': 'TextEdit', 'layer': 'TextEdit', 'path': 'TextEdit', });
+lyr_SiteBoundary_19.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'PROP_PFI': 'TextEdit', 'PROP_LGA_CODE': 'TextEdit', 'PROP_PROPNUM': 'TextEdit', 'PROP_PROPERTY_TYPE': 'TextEdit', 'PROP_MULTI_ASSESSMENT': 'TextEdit', 'PROP_STATUS': 'TextEdit', 'ADD_EZI_ADDRESS': 'TextEdit', 'ADD_IS_PRIMARY': 'TextEdit', 'ADD_HOUSE_NUMBER_1': 'TextEdit', 'ADD_HOUSE_SUFFIX_1': 'TextEdit', 'ADD_ROAD_NAME': 'TextEdit', 'ADD_ROAD_TYPE': 'TextEdit', 'ADD_ROAD_SUFFIX': 'TextEdit', 'ADD_LOCALITY_NAME': 'TextEdit', 'ADD_STATE': 'TextEdit', 'ADD_POSTCODE': 'TextEdit', 'ADD_NUM_ROAD_ADDRESS': 'TextEdit', 'Shape_Length': 'TextEdit', 'Shape_Area': 'TextEdit', });
 lyr_PassiveOpenSpace_3.set('fieldLabels', {'fid': 'no label', 'OBJECTID': 'no label', 'PROP_PFI': 'no label', 'PROP_LGA_CODE': 'no label', 'PROP_PROPNUM': 'no label', 'PROP_PROPERTY_TYPE': 'no label', 'PROP_MULTI_ASSESSMENT': 'no label', 'PROP_STATUS': 'no label', 'ADD_EZI_ADDRESS': 'no label', 'ADD_IS_PRIMARY': 'no label', 'ADD_HOUSE_NUMBER_1': 'no label', 'ADD_HOUSE_SUFFIX_1': 'no label', 'ADD_ROAD_NAME': 'no label', 'ADD_ROAD_TYPE': 'no label', 'ADD_ROAD_SUFFIX': 'no label', 'ADD_LOCALITY_NAME': 'no label', 'ADD_STATE': 'no label', 'ADD_POSTCODE': 'no label', 'ADD_NUM_ROAD_ADDRESS': 'no label', 'Shape_Length': 'no label', 'Shape_Area': 'no label', });
 lyr_MixedFarming_4.set('fieldLabels', {'id': 'hidden field', 'a': 'no label', });
 lyr_LawnandPlayground_5.set('fieldLabels', {'id': 'hidden field', 'a': 'no label', });
@@ -338,7 +355,8 @@ lyr_Road_14.set('fieldLabels', {'fid': 'no label', 'id': 'no label', });
 lyr_AccessRoad_15.set('fieldLabels', {'id': 'no label', });
 lyr_Toilet_16.set('fieldLabels', {'fid': 'hidden field', 'Name': 'inline label - visible with data', });
 lyr_GlampingTent_17.set('fieldLabels', {'fid': 'hidden field', 'Name': 'inline label - visible with data', });
-lyr_SiteBoundary_18.set('fieldLabels', {'fid': 'no label', 'OBJECTID': 'no label', 'PROP_PFI': 'no label', 'PROP_LGA_CODE': 'no label', 'PROP_PROPNUM': 'no label', 'PROP_PROPERTY_TYPE': 'no label', 'PROP_MULTI_ASSESSMENT': 'no label', 'PROP_STATUS': 'no label', 'ADD_EZI_ADDRESS': 'no label', 'ADD_IS_PRIMARY': 'no label', 'ADD_HOUSE_NUMBER_1': 'no label', 'ADD_HOUSE_SUFFIX_1': 'no label', 'ADD_ROAD_NAME': 'no label', 'ADD_ROAD_TYPE': 'no label', 'ADD_ROAD_SUFFIX': 'no label', 'ADD_LOCALITY_NAME': 'no label', 'ADD_STATE': 'no label', 'ADD_POSTCODE': 'no label', 'ADD_NUM_ROAD_ADDRESS': 'no label', 'Shape_Length': 'no label', 'Shape_Area': 'no label', });
-lyr_SiteBoundary_18.on('precompose', function(evt) {
+lyr_BufferDistancesResidential_18.set('fieldLabels', {'fid': 'no label', 'id': 'no label', 'layer': 'no label', 'path': 'no label', });
+lyr_SiteBoundary_19.set('fieldLabels', {'fid': 'no label', 'OBJECTID': 'no label', 'PROP_PFI': 'no label', 'PROP_LGA_CODE': 'no label', 'PROP_PROPNUM': 'no label', 'PROP_PROPERTY_TYPE': 'no label', 'PROP_MULTI_ASSESSMENT': 'no label', 'PROP_STATUS': 'no label', 'ADD_EZI_ADDRESS': 'no label', 'ADD_IS_PRIMARY': 'no label', 'ADD_HOUSE_NUMBER_1': 'no label', 'ADD_HOUSE_SUFFIX_1': 'no label', 'ADD_ROAD_NAME': 'no label', 'ADD_ROAD_TYPE': 'no label', 'ADD_ROAD_SUFFIX': 'no label', 'ADD_LOCALITY_NAME': 'no label', 'ADD_STATE': 'no label', 'ADD_POSTCODE': 'no label', 'ADD_NUM_ROAD_ADDRESS': 'no label', 'Shape_Length': 'no label', 'Shape_Area': 'no label', });
+lyr_SiteBoundary_19.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_SiteBoundary_18 = function(feature, resolution){
+var style_BufferDistancesResidential_18 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -20,7 +20,7 @@ var style_SiteBoundary_18 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.9}),fill: new ol.style.Fill({color: 'rgba(232,113,141,0.0)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: [12.54,2.508,5.016,2.508,5.016,2.508], lineCap: 'butt', lineJoin: 'miter', width: 2.508}),fill: new ol.style.Fill({color: 'rgba(164,113,88,0.0)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
